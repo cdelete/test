@@ -1,1 +1,92 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios - Etiquetas semanticas</title>
+
+    <style>
+        form label {
+            display: block;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formularios y Etiquetas semanticas</h1>
+    <h2>Fomularios</h2>
+    <form action="" method="GET">
+        <label>
+            Nombre
+            <input id="Nombre" type="text" name="Nombre" placeholder="Ingrese su nombre">
+        </label>
+
+        <label>
+            Apellido
+            <input type="text" name="Apellido">
+        </label>
+
+        <label>
+            Edad
+            <input type="number" name="Edad">
+        </label>
+
+        <label>
+            email
+            <input type="email" name="Email" required placeholder="mail_de_ejemplo@gmail.com">
+        </label>
+
+        <label>
+            contraseña
+            <input type="password" name="Pass" required>
+        </label>
+
+        <label>
+            Info
+            <input type="text" readonly disabled value="asd">
+        </label>
+
+        <label>
+            Auto
+            <input type="checkbox" name="Vehiculo" value="Auto">
+        </label>
+        <label>
+            Moto
+            <input type="checkbox" name="Vehiculo" value="Moto">
+        </label>
+        <label>
+            Bici
+            <input type="checkbox" name="Vehiculo" value="Bici" checked>
+        </label>
+
+        <fieldset>
+            <legend>Comida Favorita</legend>
+            <label>
+                Pizza
+                <input type="radio" name="ComidaFavorita" value="Pizza">
+            </label>
+            <label>
+                Empanada
+                <input type="radio" name="ComidaFavorita" value="Empanada">
+            </label>
+            <label>
+                Hamburgesa
+                <input type="radio" name="ComidaFavorita" value="Hamburgesa" checked>
+            </label>
+        </fieldset>
+
+        <label for="Pais">Pais</label>
+        <select name="Pais" id="Pais">
+            <option value="Argentina">Argentina</option>
+            <option value="Uruguay">Uruguay</option>
+            <option value="Bolivia">Bolivia</option>
+            <option value="Peru" selected>Peru</option>
+            <option value="Chile">Chile</option>
+        </select>
+
+        <input type="reset">
+        <input type="submit">
+    </form>
+</body>
+</html>
