@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin: 0 5%;
+            display: grid;
+            gap: 10px;
+            height: 100%;
+            width: 100%;
+            /*max-width: 1000px;*/
+            grid-template-areas: 'header header header'
+                                 'contenido contenido sidebar'
+                                 'widget1 widget2 sidebar'
+                                 'footer footer footer';
+            background-color: rgb(248, 244, 244);
+            grid-template-columns: 40% 40% 20%;
+            grid-template-rows: 10% 60% 20% 10%;
+        }
+
+        .header,
+        .contenido,
+        .widget1,
+        .widget2,
+        .sidebar {
+            /*margin: 2px ;*/
+            padding: 3%;
+            border-radius: 2px;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: black;
+            color: white;
+        }
+
+        .contenido {
+            grid-area: contenido;
+            background-color: white;
+            color: black;
+        }
+
+        .widget1 {
+            grid-area: widget1;
+            background-color: blue;
+            color: white;
+        }
+
+        .widget2 {
+            grid-area: widget2;
+            background-color: blue;
+            color: white;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: orange;
+            color: white-;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: black;
+            color: white;
+
+        }
+ 
+        @media screen and (max-width: 600px) {
+            .container {
+                grid-template-rows: 10% 50% 10% 10% 10% 10%;
+                grid-template-areas: 'header    header    header '
+                                     'contenido contenido contenido'
+                                     'sidebar   sidebar   sidebar'
+                                     'widget1   widget1   widget1'
+                                     'widget2   widget2   widget2'
+                                     'footer    footer    footer';
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            Header
+        </div>
+        <div class="contenido">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis rutrum gravida. Aliquam vel
+                nunc sit amet nibh aliquam sollicitudin eu vitae elit. Duis varius turpis est, at feugiat metus blandit
+                non. Mauris est nunc, ullamcorper nec egestas at, faucibus ac ex. Cras gravida ut odio eget vulputate.
+                Suspendisse ut nunc cursus, vulputate tortor id, mollis magna. Proin mattis euismod magna. Suspendisse
+                mattis, nunc vitae mattis iaculis, elit massa facilisis magna, ac consequat magna lacus sit amet lectus.
+                Suspendisse a lacinia est, a semper turpis. Phasellus lobortis eget nibh in scelerisque. Morbi feugiat
+                volutpat nisl, vehicula commodo augue volutpat at. Aenean aliquet tristique diam. Aenean maximus, quam
+                non sollicitudin efficitur, est sapien pharetra odio, eget aliquam justo urna eu eros. Donec nec
+                tincidunt tortor.
+                Maecenas pharetra pretium quam ut posuere. Quisque luctus sem purus. Phasellus vel nibh sed erat
+                interdum placerat eget a dui. Vivamus viverra pharetra congue. Sed pretium mi eu dui congue pulvinar.
+                Donec felis risus, malesuada quis tristique faucibus, vestibulum non urna. Fusce nec orci pulvinar,
+                blandit velit quis, finibus neque. Mauris malesuada metus eget ornare pellentesque. Nunc pharetra ante
+                eget ullamcorper finibus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Nulla maximus a dolor non condimentum. Suspendisse convallis ullamcorper justo.
+                Nullam ut erat sit amet elit ultricies tempor vel eget magna. Vivamus vitae diam purus. Fusce semper
+                nisl a nulla congue feugiat. Maecenas et tincidunt felis, dapibus rhoncus sapien. Maecenas tortor
+                tortor. Vivamus mauris arcu, faucibus pulvinar laoreet sed, scelerisque et dui.
+            </p>
+        </div>
+        <div class="sidebar">
+            Sidebar
+        </div>
+        <div class="widget1">WIDGET 1</div>
+        <div class="widget2">WIDGET 2</div>
+        <div class="footer">Footer</div>
+
+    </div>
+</body>
+
+</html>
